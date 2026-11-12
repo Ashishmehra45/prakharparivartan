@@ -124,6 +124,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
             </article>
 
             <article className="p-3">
+              
               <h3 className="text-[16px] font-black leading-tight mb-2 text-black">
                 सोनिया गांधी ने कहा- यह कोई राजनीतिक किताब नहीं
               </h3>
