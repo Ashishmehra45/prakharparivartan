@@ -124,7 +124,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
             </article>
 
             <article className="p-3">
-              
+
               <h3 className="text-[16px] font-black leading-tight mb-2 text-black">
                 सोनिया गांधी ने कहा- यह कोई राजनीतिक किताब नहीं
               </h3>
@@ -166,15 +166,17 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ p
 
       {/* ----------------- PAGINATION ----------------- */}
       <div className="flex justify-between items-center p-4 bg-white border-x-2 border-b-2 border-black max-w-[1200px] mx-auto mt-4">
-        {currentPage > 1 ? (
-          <Link href={`/?page=${currentPage - 1}`} className="px-4 py-1 border-2 border-[#008ba3] text-[#008ba3] font-bold text-sm hover:bg-[#008ba3] hover:text-white transition">← पिछला पृष्ठ</Link>
-        ) : <div className="px-4 py-1 invisible">Placeholder</div>}
         
-        <span className="font-bold text-sm text-gray-700">पृष्ठ {currentPage} / {totalPages}</span>
+        {/* Home page pe Previous button nahi hota, isliye ise invisible rakha hai taaki layout na bigde */}
+        <div className="px-4 py-1 invisible">Placeholder</div>
+        
+        <span className="font-bold text-sm text-gray-700">पृष्ठ 1 / 3</span>
 
-        {currentPage < totalPages ? (
-          <Link href={`/?page=${currentPage + 1}`} className="px-4 py-1 border-2 border-[#008ba3] text-[#008ba3] font-bold text-sm hover:bg-[#008ba3] hover:text-white transition">अगला पृष्ठ →</Link>
-        ) : <div className="px-4 py-1 invisible">Placeholder</div>}
+        {/* Next button seedha naye /next1 page par le jayega */}
+        <Link href="/next1" className="px-4 py-1 border-2 border-[#008ba3] text-[#008ba3] font-bold text-sm hover:bg-[#008ba3] hover:text-white transition">
+          अगला पृष्ठ →
+        </Link>
+        
       </div>
     </main>
   );
